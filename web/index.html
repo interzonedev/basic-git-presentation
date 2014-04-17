@@ -107,6 +107,50 @@
                         </li>
                     </ul>
                 </section>
+
+                <section>
+                    <h2>Git Characteristics</h2>
+                    <ul>
+                        <li class="fragment">
+                            Git works locally as well as remotely.
+                        </li>
+                        <li class="fragment">
+                            Git adds only a single .git directory to the project and does not add files to every
+                            directory in the project like some central VCS's like SVN.
+                        </li>
+                        <li class="fragment">
+                            Git uses a mini Unix style file system to keep track of snapshots of the entire project over
+                            time.
+                        </li>
+                        <li class="fragment">
+                            History in Git describes the project as a whole and not individual files though it is
+                            possible to look at history on individual files.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Git Project History</h2>
+                    <h6>(Image from Pro Git by Scott Chacon)</h6>
+                    <ul>
+                        <li class="fragment">
+                            Git keeps track of history as a series of commits.
+                        </li>
+                        <li class="fragment">
+                            Commits have one or more parents depending on the nature of the project history (a directed
+                            acyclic graph).
+                        </li>
+                        <li class="fragment">
+                            The history that led to a particular commit can be retraced from that commit.
+                        </li>
+                        <li class="fragment">
+                            Each commit represents a complete snapshot of the filesystem of the project at the time of
+                            the commit.
+                        </li>
+                    </ul>
+                    <img src="assets/img/frombook/commit_history.png" alt="Git Commit History"
+                        title="Git Commit History" />
+                </section>
             </div>
         </div>
 
