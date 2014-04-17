@@ -1,0 +1,144 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Presentation - Basic Git</title>
+
+        <meta name="description" content="General overview of version control with Git and common Git usage " />
+        <meta name="author" content="Mark Markarian" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <link rel="stylesheet" href="assets/reveal/css/reveal.min.css" />
+        <link rel="stylesheet" href="assets/reveal/css/theme/default.css" id="theme" />
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="assets/reveal/lib/css/zenburn.css" />
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="assets/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
+        </script>
+
+        <!-- Add custom styles. -->
+        <link rel="stylesheet" href="assets/css/overrides.css" />
+
+        <!--[if lt IE 9]>
+        <script src="assets/reveal/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Git Overview</h1>
+                    <h2>General overview of version control with Git and common Git usage</h2>
+                    <p>
+                        Heavy usage was made of the book Pro Git by Scott Chacon of GitHub (including images).  Also
+                        made usage of the talk “Git Graphs, Hashes, and Compression, Oh My” by Matthew McCullough also
+                        of GitHub.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Version Control</h2>
+                    <ul>
+                        <li class="fragment">
+                            The ability to concurrently work on an individual file or files and resolve differences.
+                        </li>
+                        <li class="fragment">
+                            A history of who made what changes and when to a file or set of files that comprise a
+                            project.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Centralized Version Control</h2>
+                    <ul>
+                        <li class="fragment">
+                            Client-server model.
+                        </li>
+                        <li class="fragment">
+                            There is one authoritative central repository that is the "source of truth".
+                        </li>
+                        <li class="fragment">
+                            Committing requires a network connection.
+                        </li>
+                        <li class="fragment">
+                            Branching can be expensive as it means copying some or all of the files in the repository.
+                        </li>
+                        <li class="fragment">
+                            Example systems: CVS, Subversion, Perforce
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Distributed Version Control</h2>
+                    <ul>
+                        <li class="fragment">
+                            Peer-to-peer model.
+                        </li>
+                        <li class="fragment">
+                            Lines of development can proceed independently on different hosts and be merged together at
+                            a later time.
+                        </li>
+                        <li class="fragment">
+                            Each host can have a complete copy of the repository.  If network connection is lost work
+                            can continue.                        
+                        </li>
+                        <li class="fragment">
+                            There may still be a server that everyone agrees is the "central" repository.
+                        </li>
+                        <li class="fragment">
+                            Branching is inexpensive as it involves creating a reference to a commit and not a copy of
+                            the repository.                        
+                        </li>
+                        <li class="fragment">
+                            Example systems: Git, Mercurial
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <script src="assets/reveal/lib/js/head.min.js"></script>
+        <script src="assets/reveal/js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'assets/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'assets/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'assets/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'assets/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'assets/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'assets/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+        </script>
+    </body>
+</html>
