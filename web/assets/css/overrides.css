@@ -1,15 +1,15 @@
-section.scale80, ul.scale80, code.scale80 {
+section.scale80, ul.scale80, code.scale80, p.scale80 {
     font-size: 80%;
 }
 
-section.scale70, ul.scale70, code.scale70 {
+section.scale70, ul.scale70, code.scale70, p.scale70 {
     font-size: 70%;
 }
 
-section.scale60, ul.scale60, code.scale60 {
+section.scale60, ul.scale60, code.scale60, p.scale60 {
     font-size: 60%;
 }
 
-section.scale50, ul.scale50, code.scale50 {
+section.scale50, ul.scale50, code.scale50, p.scale50 {
     font-size: 50%;
 }

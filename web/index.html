@@ -131,7 +131,7 @@
 
                 <section>
                     <h2>Git Project History</h2>
-                    <h6>(Image from Pro Git by Scott Chacon)</h6>
+                    <p class="scale50">(Image from Pro Git by Scott Chacon)</p>
                     <ul>
                         <li class="fragment">
                             Git keeps track of history as a series of commits.
@@ -150,6 +150,71 @@
                     </ul>
                     <img src="assets/img/frombook/commit_history.png" alt="Git Commit History"
                         title="Git Commit History" />
+                </section>
+
+                <section>
+                    <h2>Git Objects</h2>
+                    <p>A Git repository is comprised of the following types of objects:</p>
+                    <ul>
+                        <li class="fragment">
+                            Commit – A history object
+                        </li>
+                        <li class="fragment">
+                            Tree – Represents a directory
+                        </li>
+                        <li class="fragment">
+                            Blob – Represent a file
+                        </li>
+                        <li class="fragment">
+                            Tag – An immovable reference to a commit
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>Git Objects (cont.)</h3>
+                    <p class="scale50">(Image from Pro Git by Scott Chacon)</p>
+                    <ul class="scale70">
+                        <li class="fragment">
+                            Each object is uniquely identifiable by a SHA-1 hash (40 hex characters or 20 bytes) and can
+                            be produced on Unix systems with the <code>shasum</code> script.
+                        </li>
+                        <li class="fragment">
+                            The objects are stored in the .git/objects directory.
+                        </li>
+                        <li class="fragment">
+                            Each file system snapshot is a combination of tree and blob objects.
+                        </li>
+                        <li class="fragment">
+                            A tree is a directory that can contain other trees (directories) and blobs (files).
+                        </li>
+                        <li class="fragment">
+                            A blob is the type, content length and file contents compressed together.
+                        </li>
+                    </ul>
+                    <img src="assets/img/frombook/commit_objects.png" alt="Git Commit Objects"
+                        title="Git Commit Objects" />
+                </section>
+
+                <section>
+                    <h2>Local Git Usage</h2>
+                    <p><code>git init</code></p>
+                    <ul>
+                        <li class="fragment">
+                            Turns an ordinary directory and the files within into a Git repository by the addition of a
+                            <code>.git</code> directory.
+                        </li>
+                        <li class="fragment">
+                            No files are yet tracked by Git.  Any files that require tracking need to be added.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Git Local File Status</h2>
+                    <p class="scale50">(Image from Pro Git by Scott Chacon)</p>
+                    <img src="assets/img/frombook/file_status_lifecycle.png" alt="Git File Status Lifecycle"
+                        title="Git File Status Lifecycle" />
                 </section>
             </div>
         </div>
