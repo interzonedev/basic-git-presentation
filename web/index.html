@@ -219,13 +219,54 @@
 
                 <section>
                     <h2>Change Local File Status</h2>
-                    <p><code>git init</code></p>
                     <ul>
                         <li class="fragment">
-                            Tracks new files
+                            <p><code>git add</code></p>
+                            <ul>
+                                <li class="fragment">
+                                    Tracks new files
+                                </li>
+                                <li class="fragment">
+                                    Stages modified files
+                                </li>
+                            </ul>
                         </li>
                         <li class="fragment">
-                            Stages modified files
+                            <p><code>git checkout -- &lt;file&gt;</code></p>
+                            <ul>
+                                <li class="fragment">
+                                    Unmodifies modified files
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <p><code>git reset HEAD &lt;file&gt;</code></p>
+                            <ul>
+                                <li class="fragment">
+                                    Untracks new files
+                                </li>
+                                <li class="fragment">
+                                    Unstages modified files
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Commit</h2>
+                    <p><code>git commit</code></p>
+                    <ul>
+                        <li class="fragment">
+                            Creates a new commit that captures a snapshot of all of the project files in the
+                            staged/unmodified state and references to its parent commits.
+                        </li>
+                        <li class="fragment">
+                            Commits carry a timestamp, the name and email of the committer and a comment.
+                        </li>
+                        <li class="fragment">
+                            Commits are identified by a SHA-1 hash and have SHA-1 hash references to their parent hashes
+                            and the tree object that describes the top level directory of the project.
                         </li>
                     </ul>
                 </section>
