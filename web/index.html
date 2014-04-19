@@ -42,7 +42,7 @@
                     <h2>General overview of version control with Git and common Git usage</h2>
                     <p>
                         Heavy usage was made of the book Pro Git by Scott Chacon of GitHub (including images).  Also
-                        made usage of the talk “Git Graphs, Hashes, and Compression, Oh My” by Matthew McCullough also
+                        made usage of the talk "Git Graphs, Hashes, and Compression, Oh My" by Matthew McCullough also
                         of GitHub.
                     </p>
                 </section>
@@ -267,6 +267,28 @@
                         <li class="fragment">
                             Commits are identified by a SHA-1 hash and have SHA-1 hash references to their parent hashes
                             and the tree object that describes the top level directory of the project.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Git Branches</h2>
+                    <ul>
+                        <li class="fragment">
+                            A branch is a pointer to a commit that moves with each subsequent child commit (i.e. a
+                            branch points to the "head" of a line of history).
+                        </li>
+                        <li class="fragment">
+                            A new local Git repository has a branch called <code>master</code> by default.
+                        </li>
+                        <li class="fragment">
+                            Branches are "free" in Git.  Creating a branch really means creating a pointer which is a
+                            file (<code>.git/refs/heads/&lt;branchname&gt;</code>) containing the 20 byte SHA-1 hash of
+                            the commit the new branch points to.
+                        </li>
+                        <li class="fragment">
+                            The special pointer called <code>HEAD</code> points to the latest commit of the branch that
+                            is currently being worked on (i.e. checked out).
                         </li>
                     </ul>
                 </section>
