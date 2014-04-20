@@ -349,9 +349,9 @@
                     <h2>Committing on a Branch</h2>
                     <p><code>git commit -a -m "did stuff on mybranch"</code></p>
                     <ul class="scale80">
-	                    <li class="fragment">
-	                       Adds a commit to the history of the project.
-	                    </li>
+                        <li class="fragment">
+                           Adds a commit to the history of the project.
+                        </li>
                         <li class="fragment">
                             The <code>mybranch</code> branch pointer advances with the new commit.
                         </li>
@@ -610,10 +610,10 @@
                         <code>git checkout -b &lt;local branchname&gt; --track &lt;remote&gt;/&lt;remote branchname&gt;</code>
                     </p>
                     <ul>
-	                    <li class="fragment">
-	                       Creates a local branch reference to the same commit that the remote branch points to (local
-	                       and remote branch names do not need to match).
-	                    </li>
+                        <li class="fragment">
+                           Creates a local branch reference to the same commit that the remote branch points to (local
+                           and remote branch names do not need to match).
+                        </li>
                         <li class="fragment">
                             Alters the local working directory to the snapshot pointed to by the commit the local branch
                             points to.
@@ -632,9 +632,9 @@
                     <h2>Showing Tracking Branches</h2>
                     <p><code>git remote show &lt;remotename&gt;</code></p>
                     <ul>
-	                    <li class="fragment">
-	                       Lists information about the specified remote including tracking branches
-	                    </li>
+                        <li class="fragment">
+                           Lists information about the specified remote including tracking branches
+                        </li>
                         <li class="fragment">
                             Example: <code>git remote show origin</code>
                             <pre>
@@ -682,18 +682,18 @@
                 <section>
                     <h2>Fetch vs. Pull</h2>
                     <ul>
-	                    <li class="fragment">
-	                       <code>git fetch &lt;remotename&gt;</code>
-	                       <ul>
-		                       <li class="fragment">
-		                           A fetch retrieves all history updates for the entire repository found at the
-		                           specified remote.
-		                       </li>
-		                       <li class="fragment">
-		                           No changes are made to the local working directory (i.e. no merge takes place).
+                        <li class="fragment">
+                           <code>git fetch &lt;remotename&gt;</code>
+                           <ul>
+                               <li class="fragment">
+                                   A fetch retrieves all history updates for the entire repository found at the
+                                   specified remote.
                                </li>
-	                       </ul>
-	                    </li>
+                               <li class="fragment">
+                                   No changes are made to the local working directory (i.e. no merge takes place).
+                               </li>
+                           </ul>
+                        </li>
                         <li class="fragment">
                             <code>git pull</code>
                             <ul>
@@ -729,20 +729,20 @@
                 <section>
                     <h2>Git Push</h2>
                     <ul class="scale70">
-	                    <li class="fragment">
-	                       <code>git push</code>
-	                       <ul>
-	                           <li class="fragment">
-	                               Pushes all tracking branches.
-	                           </li>
-	                           <li class="fragment">
-	                               No action is taken on non tracking branches.
+                        <li class="fragment">
+                           <code>git push</code>
+                           <ul>
+                               <li class="fragment">
+                                   Pushes all tracking branches.
                                </li>
-	                       </ul>
-	                    </li>
-	                    <li class="fragment">
-	                       <code>git push &lt;remotename&gt; &lt;local branchname&gt;:&lt;remote branchname&gt;</code>
-	                       <ul>
+                               <li class="fragment">
+                                   No action is taken on non tracking branches.
+                               </li>
+                           </ul>
+                        </li>
+                        <li class="fragment">
+                           <code>git push &lt;remotename&gt; &lt;local branchname&gt;:&lt;remote branchname&gt;</code>
+                           <ul>
                                <li class="fragment">
                                    Pushes changes from the specified local branch to the specified branch on the
                                    specified remote.
