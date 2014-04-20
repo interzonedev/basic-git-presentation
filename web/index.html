@@ -362,6 +362,40 @@
                     <img src="assets/img/custom/commit_history_commit_new_branch.png" alt="Git Commit New Branch"
                         title="Git Commit New Branch" />
                 </section>
+
+                <section>
+                    <h2>Diverging History</h2>
+                    <p><code>git checkout master</code></p>
+                    <ul>
+                        <li class="fragment">
+                            Moves the <code>HEAD</code> pointer back to the <code>master</code> branch pointer
+                        </li>
+                        <li class="fragment">
+                            Leaves the <code>mybranch</code> branch pointer where it is
+                        </li>
+                        <li class="fragment">
+                            Updates the files in the working directory back to the snapshot pointed to by
+                            <code>master</code>
+                        </li>
+                    </ul>
+                    <img src="assets/img/custom/commit_history_checkout_master.png" alt="Git Checkout Master"
+                        title="Git Checkout Master" />
+                </section>
+
+                <section>
+                    <h2>Diverging History (cont.)</h2>
+                    <p><code>git commit -a – m "did stuff on master"</code></p>
+                    <ul class="scale80">
+                        <li class="fragment">
+                            Adds a commit with the commit pointed to by <code>master</code> as the parent
+                        </li>
+                        <li class="fragment">
+                            There is now divergence in the history
+                        </li>
+                    </ul>
+                    <img src="assets/img/custom/commit_history_commit_master.png" alt="Git Commit Master"
+                        title="Git Commit Master" />
+                </section>
             </div>
         </div>
 
