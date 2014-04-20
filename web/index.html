@@ -726,6 +726,84 @@
                         width="654" height="550" />
                 </section>
 
+                <section>
+                    <h2>Git Push</h2>
+                    <ul class="scale70">
+	                    <li class="fragment">
+	                       <code>git push</code>
+	                       <ul>
+	                           <li class="fragment">
+	                               Pushes all tracking branches.
+	                           </li>
+	                           <li class="fragment">
+	                               No action is taken on non tracking branches.
+                               </li>
+	                       </ul>
+	                    </li>
+	                    <li class="fragment">
+	                       <code>git push &lt;remotename&gt; &lt;local branchname&gt;:&lt;remote branchname&gt;</code>
+	                       <ul>
+                               <li class="fragment">
+                                   Pushes changes from the specified local branch to the specified branch on the
+                                   specified remote.
+                               </li>
+                               <li class="fragment">
+                                   If "&lt;local branchname&gt;:" is omitted uses the currently checked out branch.
+                               </li>
+                               <li class="fragment">
+                                   Does not automatically make the currently checked out branch a tracking branch.
+                               </li>
+                           </ul>
+                        </li>
+                        <li class="fragment">
+                            <code>git push -u &lt;remotename&gt; &lt;local branchname&gt;:&lt;remote branchname&gt;</code>
+                            <ul>
+                               <li class="fragment">
+                                   Pushes changes from the currently checked out branch to the specified branch on the
+                                   specified remote.
+                               </li>
+                               <li class="fragment">
+                                   Makes the currently checked out branch a tracking branch.
+                               </li>
+                           </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Deleting Branches</h2>
+                    <ul>
+                        <li class="fragment">
+                            <code>git branch -d &lt;branchname&gt;</code>
+                            <ul>
+                                <li class="fragment">
+                                    Deletes the local branch with the specified name.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <code>git branch -rd &lt;remotename&gt;/&lt;branchname&gt;</code>
+                            <ul>
+                                <li class="fragment">
+                                    Deletes the local reference to the branch with the specified name on the specified
+                                    remote.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <code>git push &lt;remotename&gt; :&lt;remote branchname&gt;</code>
+                            <ul>
+                                <li class="fragment">
+                                    Delete the branch with the specified name on the specified remote.
+                                </li>
+                                <li class="fragment">
+                                    It's like pushing null to the remote branch.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
             </div>
         </div>
 
