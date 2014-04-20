@@ -576,8 +576,93 @@
 
                 <section>
                     <h2>Checkout Remote Branch</h2>
-                    <img src="assets/img/custom/commit_history_remote_checkout_mybranch.png" alt="Git Checkout Remote Branch"
-                        title="Git Checkout Remote Branch" width="646" height="550" />
+                    <img src="assets/img/custom/commit_history_remote_checkout_mybranch.png"
+                        alt="Git Checkout Remote Branch" title="Git Checkout Remote Branch" width="646" height="550" />
+                </section>
+
+                <section>
+                    <h2>Tracking Branches</h2>
+                    <p><code>git checkout &lt;branchname&gt;</code> when there is a remote branch of the same name</p>
+                    <ul>
+                        <li class="fragment">
+                            Creates a local branch reference to the same commit that the remote branch of the same name
+                            points to (<code>mybranch</code> points to <code>C4</code>).
+                        </li>
+                        <li class="fragment">
+                            Alters the local working directory to the snapshot pointed to by the commit the branch
+                            points to (the files reflect the state of <code>C4</code>).
+                        </li>
+                        <li class="fragment">
+                            Moves the <code>HEAD</code> pointer to the same commit that the branch points to
+                            (<code>HEAD</code> and <code>mybranch</code> point to <code>C4</code>).
+                        </li>
+                        <li class="fragment">
+                            Makes the local branch track the remote branch so that Git knows which remote branch to pull
+                            from and push to.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Tracking Branches (cont.)</h2>
+                    <p>More generally:</p>
+                    <p>
+                        <code>git checkout -b &lt;local branchname&gt; --track &lt;remote&gt;/&lt;remote branchname&gt;</code>
+                    </p>
+                    <ul>
+	                    <li class="fragment">
+	                       Creates a local branch reference to the same commit that the remote branch points to (local
+	                       and remote branch names do not need to match).
+	                    </li>
+                        <li class="fragment">
+                            Alters the local working directory to the snapshot pointed to by the commit the local branch
+                            points to.
+                        </li>
+                        <li class="fragment">
+                            Moves the <code>HEAD</code> pointer to the same commit that the local branch points to.
+                        </li>
+                        <li class="fragment">
+                            Makes the local branch track the remote branch so that Git knows which remote branch to pull
+                            from and push to.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Showing Tracking Branches</h2>
+                    <p><code>git remote show &lt;remotename&gt;</code></p>
+                    <ul>
+	                    <li class="fragment">
+	                       Lists information about the specified remote including tracking branches
+	                    </li>
+                        <li class="fragment">
+                            Example: <code>git remote show origin</code>
+                            <pre>
+                                <code data-trim>
+* remote origin
+  Fetch URL: git@github.com:interzonedev/gittest.git
+  Push  URL: git@github.com:interzonedev/gittest.git
+  HEAD branch: master
+  Remote branches:
+    master   tracked
+    mybranch tracked
+  Local branches configured for 'git pull':
+    master   merges with remote master
+    mybranch merges with remote mybranch
+  Local refs configured for 'git push':
+    master   pushes to master   (up to date)
+    mybranch pushes to mybranch (up to date)
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Commit on Remote and Local Branch</h2>
+                    <img src="assets/img/custom/commit_history_remote_commit_mybranch.png"
+                        alt="Git Local and Remote Commit" title="Git Local and Remote Commit"
+                        width="646" height="550" />
                 </section>
 
             </div>
