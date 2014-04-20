@@ -396,6 +396,71 @@
                     <img src="assets/img/custom/commit_history_commit_master.png" alt="Git Commit Master"
                         title="Git Commit Master" />
                 </section>
+
+                <section>
+                    <h2>Merging</h2>
+                    <p><code>git merge [&lt;branchname&gt;...]</code></p>
+                    <ul>
+                        <li class="fragment">
+                            Performs a merge onto the current branch from the specified branches (one or more can be
+                            specified, if more than one it's called an "Octopus" merge).
+                        </li>
+                        <li class="fragment">
+                            Merges the files from the snapshot pointed to by each &lt;branchname&gt; with the files in
+                            the snapshot pointed to by the current branch.
+                        </li>
+                        <li class="fragment">
+                            Creates a new commit with two (or more in the case of an Octopus) parents that indicates
+                            which files got merged.
+                        </li>
+                        <li class="fragment">
+                            If there are merge conflicts they need to be resolved (either by hand or with a graphical
+                            merge tool) before the merge can proceed.
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="scale70">
+                    <h2>Merging (cont.)</h2>
+                    <p><code>git merge mybranch</code></p>
+                    <ul>
+                        <li class="fragment">
+                            Merges the <code>mybranch</code> branch onto the <code>master</code> branch.
+                        </li>
+                        <li class="fragment">
+                            Results in a new commit.
+                        </li>
+                        <li class="fragment">
+                            One parent of the new commit points back to the previous commit on the <code>master</code>
+                            branch.
+                        </li>
+                        <li class="fragment">
+                            The other parent of the new commit points back to the last commit on the
+                            <code>mybranch</code> branch.
+                        </li>
+                    </ul>
+                    <img src="assets/img/custom/commit_history_merge_mybranch.png" alt="Git Merge mybranch"
+                        title="Git Merge mybranch" />
+                </section>
+
+                <section>
+                    <h2>Delete Local Branch</h2>
+                    <p><code>git branch -d &lt;branchname&gt;</code></p>
+                    <ul>
+                        <li class="fragment">
+                            Deletes only the branch pointer.
+                        </li>
+                        <li class="fragment">
+                            Does not alter history or file contents at all.
+                        </li>
+                        <li class="fragment">
+                            Example: <code>git branch -d mybranch</code>
+                        </li>
+                    </ul>
+                    <img src="assets/img/custom/commit_history_delete_mybranch.png" alt="Git Delete Branch"
+                        title="Git Delete Branch" />
+                </section>
+
             </div>
         </div>
 
