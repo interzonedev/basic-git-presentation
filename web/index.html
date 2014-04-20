@@ -679,6 +679,53 @@
                         width="654" height="550" />
                 </section>
 
+                <section>
+                    <h2>Fetch vs. Pull</h2>
+                    <ul>
+	                    <li class="fragment">
+	                       <code>git fetch &lt;remotename&gt;</code>
+	                       <ul>
+		                       <li class="fragment">
+		                           A fetch retrieves all history updates for the entire repository found at the
+		                           specified remote.
+		                       </li>
+		                       <li class="fragment">
+		                           No changes are made to the local working directory (i.e. no merge takes place).
+                               </li>
+	                       </ul>
+	                    </li>
+                        <li class="fragment">
+                            <code>git pull</code>
+                            <ul>
+                               <li class="fragment">
+                                   A pull performs a fetch then merges the currently checked out branch if it is a
+                                   tracking branch.
+                               </li>
+                               <li class="fragment">
+                                   If the currently checked out branch is not a tracking branch, performs a fetch but
+                                   does not merge.
+                               </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <code>git pull &lt;remotename&gt; &lt;branchname&gt;</code>
+                            <ul>
+                               <li class="fragment">
+                                   Performs a fetch and merges the specified branch onto the currently checked out
+                                   branch
+                               </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Push to Remote Repository</h2>
+                    <img src="assets/img/custom/commit_history_remote_push.png"
+                        alt="Git Push to Remote Branch" title="Git Push to Remote Branch"
+                        width="654" height="550" />
+                </section>
+
             </div>
         </div>
 
