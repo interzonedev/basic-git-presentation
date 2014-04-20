@@ -461,6 +461,113 @@
                         title="Git Delete Branch" />
                 </section>
 
+                <section>
+                    <h2>Remote Git Repositories</h2>
+                    <ul>
+                        <li class="fragment">
+                            A remote repository is any other Git repository either on the same host or a different host.
+                        </li>
+                        <li class="fragment">
+                            Git can communicate with remote repositories over a variety of protocols (file, SSH, HTTP):
+                            <ul>
+                                <li class="fragment">
+                                    Local (file)
+                                </li>
+                                <li class="fragment">
+                                    Git (no authentication, generally read only)
+                                </li>
+                                <li class="fragment">
+                                    SSH (can use public/private keys for authentication)
+                                </li>
+                                <li class="fragment">
+                                    HTTP(S)
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            With the proper authentication a remote repository can be cloned/fetched from or pushed to.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Getting a Remote Repository</h2>
+                    <p><code>git clone &lt;URL&gt; [directory name]</code></p>
+                    <ul>
+                        <li class="fragment">
+                            Creates a local directory with either the specified name or the name of the remote Git
+                            repository if not specified
+                        </li>
+                        <li class="fragment">
+                            Initializes the local directory with a .git directory and copies all relevant Git database
+                            information down (refs, objects, etc.)
+                        </li>
+                        <li class="fragment">
+                            The new local repository contains all the commit history of the remote repository
+                        </li>
+                        <li class="fragment">
+                            The default local branch will be whatever HEAD pointed to in the remote repository
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Git Remotes</h2>
+                    <ul>
+                        <li class="fragment">
+                            A remote is a reference to the URL of a remote Git repository.
+                        </li>
+                        <li class="fragment">
+                            When a remote repository is cloned, a default remote called <code>origin</code> is created
+                            that is a reference to the URL the repository was cloned from.
+                        </li>
+                        <li class="fragment">
+                            Git allows you to list, add, rename and delete remotes.
+                        </li>
+                        <li class="fragment">
+                            Remotes can be used as shortcuts for URLs when performing remote Git operations such as
+                            fetching and pushing.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Updating from a Remote Repository</h2>
+                    <p><code>git fetch &lt;remotename&gt;</code></p>
+                    <ul>
+                        <li class="fragment">
+                            Downloads history from the specified remote that is missing in the local repository and
+                            updates all Git objects (i.e. files in the <code>.git/objects</code> directory).
+                        </li>
+                        <li class="fragment">
+                            Does NOT update the local working directory.
+                        </li>
+                        <li class="fragment">
+                            Changes will come down on all branches on the remote
+                        </li>
+                        <li class="fragment">
+                            No files in the local working directory will be changed until there is a merge
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Merging a Remote Branch</h2>
+                    <p><code>git merge &lt;remotename&gt;/&lt;branchname&gt;</code></p>
+                    <ul>
+                        <li class="fragment">
+                            Merges take place locally after a fetch.
+                        </li>
+                        <li class="fragment">
+                            The current branch can be merged with one or more remote branch references in the same
+                            fashion as a merge with local branches.
+                        </li>
+                        <li class="fragment">
+                            No changes are made to files on the remote host until a <code>push</code> is executed.
+                        </li>
+                    </ul>
+                </section>
+
             </div>
         </div>
 
